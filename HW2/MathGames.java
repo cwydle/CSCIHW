@@ -25,19 +25,19 @@ public class MathGames {
             double gradeValue = input.nextDouble();
             double roundUp = Math.ceil(gradeValue);
            // System.out.println("Your grade is " + roundUp);
-            if (roundUp > 90) {
+            if (roundUp > 89) {
                 // block of code to be executed if the condition is true
                 System.out.println("Your grade is an A."+ "\n");
-            } else if (roundUp > 80) {
+            } else if (roundUp > 79) {
                 // block of code to be executed if the condition is false
                 System.out.println("Your grade is a B."+ "\n");
-              } else if (roundUp > 70) {
+              } else if (roundUp > 69) {
                 // block of code to be executed if the condition is false
                 System.out.println("Your grade is a C."+ "\n");
-                } else if (roundUp > 60) {
+                } else if (roundUp > 59) {
                     // block of code to be executed if the condition is false
                     System.out.println("Your grade is a D."+ "\n");
-                } else if (roundUp < 59) {
+                } else if (roundUp < 60) {
                     System.out.println("Your grade is a F."+ "\n");
         }
             System.out.println("Enter the cost of the meal: ");
@@ -58,9 +58,10 @@ public class MathGames {
             int people = input.nextInt();
        // round divided by people
             double peoplePay = round/people; 
-            System.out.println("Each person has to pay $" + peoplePay);
+            double roundPay = Math.ceil(peoplePay);
+            System.out.println("Each person has to pay $" + roundPay);
        //closes scanner
             input.close();
     }
         
-    }
+    } 
