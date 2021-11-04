@@ -13,9 +13,9 @@ public class Main {
         //prints out what is in return 
         System.out.println(str);
         //prints out method
-        Pyramid.Output();
+        Pyramid.Output(); 
 
-        //a.story(name, age, favoriteColor);
+        //a.story(name, age, favoriteColor); 
  
         Replace r = new Replace();
         r.charReplace("I stan iTZY", 7, 'I'); 

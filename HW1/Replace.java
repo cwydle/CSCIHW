@@ -9,9 +9,9 @@ package HW1;
 public class Replace {
     public String charReplace(String s, int x, char z) {
         //puts a "value" to string, int, and char
-        s = "I stan iTZY"; 
-        x = 7; 
-        z = 'I'; 
+        //s = "I stan iTZY"; 
+        //x = 7; 
+        //z = 'I'; 
         
         StringBuilder sb = new StringBuilder(s);
         // replace character at the specified position
