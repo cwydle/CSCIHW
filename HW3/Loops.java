@@ -4,21 +4,23 @@ import java.util.Scanner;
 public class Loops {
     public static void main(String[] args) {
         System.out.println("Welcome!");
-        Scanner scan = new Scanner(System.in); 
 
     // \"word in quote\" allows you to print out a word with quotes around it 
         //System.out.print("Spell \"eat\" with as many e's before it looks weird? \n");                                                             
         //String str = scan.nextLine();
+
     //calls the method loopE(str) into boolean's object called eat
-        String str = "eeeeat"; 
-        boolean eat = loopE(str); 
+        boolean eat = loopE("eeeeat"); 
         System.out.println(eat);
 
         String answer = stringTimes("code", 3);
         System.out.println(answer);
 
+        String zzzzz = stringZ("nozthaznks");
+        System.out.println(zzzzz);
 
-        scan.close();       
+        sums(); 
+
     }
 
     //NOTE: DO NOT change anything in the boiler plate
@@ -66,7 +68,15 @@ public class Loops {
     //stringT("nozthaznks") -> "nothanks"
     //stringT("xksiazdjaasldzsajzasdz") -> "xksiadjaasldsajasdz"
     public static String stringZ(String str){
-        return null; // <- this should be changed 
+
+        System.out.println("Look I removed all z's in a string but not at the beginning and end. ");
+
+        String s1 = str.replace("z",""); 
+        char start = 'z';
+        char end = 'z';
+        s1 = start + s1 + end; 
+
+        return s1; // <- this should be changed 
     }
 
     //Create a method that contains a while loop that allows for
@@ -94,9 +104,19 @@ public class Loops {
     // The total so far is 27.
     // Number: 0
     // TOTAL ENDED --- The total is 27.
-    public static void sums(){
+    public static void sums() {
+        System.out.println("I can add up the numbers you give me. \nA '0' will end the code");
+      int number, total = 0;
+      Scanner scan = new Scanner(System.in);
+      do{
+          System.out.println("Please enter number: ");
+          number = scan.nextInt();
+          System.out.println("Number: " + number);
+          total += number;
+          System.out.println("Your total so far is " + total);
+      }while (number != 0);  
+      System.out.println("TOTAL ENDED --- The total is " + total);
+      scan.close();
     
     }
-
-
 }
