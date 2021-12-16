@@ -7,7 +7,7 @@ public class ArrayListPlayground {
     public static void main(String[] args) {
       nums(); 
       Week();
-    
+      inpution(); 
     }
  // Question 1
     // Write Java statements that do the following:
@@ -93,9 +93,49 @@ public class ArrayListPlayground {
     // ArrayList Size: 7
     // Please enter 2 more numbers to create the matrix...
     // 
-public static void inpution(String user) {
-    Scanner input = new Scanner(System.in); 
+public static void inpution() {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        Scanner scan = new Scanner(System.in);
+        int number = 0;
 
-       
-}
+        while(true) {
+            System.out.println("Enter number. If you want to stop, enter 0. ");
+            number = scan.nextInt(); 
+            list.add(number); 
+
+            if (number == 0) {
+                list.removeAll(Collections.singleton(0)); 
+                int large = Collections.max(list);
+                int small = Collections.min(list);
+                System.out.println("The largest number is " + large + " and the smallest is " + small);
+                Collections.sort(list);
+                System.out.println("Here are the numbers you entered from smallest to largest: " + list);
+
+        // % = Divides left-hand operand by right-hand operand and returns remainder. 
+        if(list.size() % 3 == 0){
+            for(int i = 0; i < list.size(); i += 3){
+                System.out.println(list.subList(i, i + 3));
+            }
+        }
+        else{
+            Integer more;
+            Integer extra = 0;
+            System.out.println("In order to complete matrix. Enter " + (3 - list.size() % 3) + " more numbers.");
+            more = (3 - list.size() % 3);
+            while(extra != more){
+                System.out.println("Enter number. If you want to stop, enter 0. ");
+                number = scan.nextInt();
+               if(number != 0){
+                list.add(number);
+               }
+               extra++;
+            }
+                for(int i = 0; i < list.size(); i += 3){
+                System.out.println(list.subList(i, i + 3));
+                }
+                break; 
+         }
+    }
+         }
+    }
 }
