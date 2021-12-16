@@ -1,6 +1,7 @@
 package HW5;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class ArrayListPlayground {
@@ -123,7 +124,7 @@ public static void inpution() {
             System.out.println("In order to complete matrix. Enter " + (3 - list.size() % 3) + " more numbers.");
             more = (3 - list.size() % 3);
             while(extra != more){
-                System.out.println("Enter number. If you want to stop, enter 0. ");
+                System.out.println("Enter number");
                 number = scan.nextInt();
                if(number != 0){
                 list.add(number);
