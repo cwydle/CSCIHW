@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ArrayListPlayground {
     public static void main(String[] args) {
-
+      nums(); 
       Week();
     
     }
@@ -15,9 +15,30 @@ public class ArrayListPlayground {
     // b) Output the value of the tenth element of the array nums.
     // c) Set the value of the 5th element of the array alpha to 99.
     // d) Set the value of the 9th element of the array alpha to the sum of the 6th and 13th elements of the array nums.
-   public static void elements(int nums) {
+   public static void nums() {
+        System.out.println("Here is an arraylist of 15 numbers: ");
+        int n = 15;
+        // Declaring the ArrayList with
+        // initial size n
+        ArrayList<Integer> numbers = new ArrayList<Integer>(n);
+ 
+        // Appending new elements at
+        // the end of the list
+        for (int i = 1; i <= n; i++)
+            numbers.add(i);
+ 
+        // Printing elements
+        System.out.println(numbers);
+        System.out.println("Here is the tenth element of the array nums: " + numbers.get(9));
 
-   }
+        numbers.set(4, 99);
+        System.out.println("I will change the 5th element of the array alpha to 99 " + "\n" + numbers);
+        
+        numbers.set(4, 5);
+        numbers.set(8, 7 + 14);
+        System.out.println("value of the 9th element of the array alpha to the sum of the 6th and 13th elements of the array nums" + "\n" + numbers);
+
+    }
 
  // Question 2
     // a) create an arrayList of Strings that contain each day of the week.(starting on monday)
