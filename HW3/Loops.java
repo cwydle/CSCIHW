@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Loops {
@@ -16,7 +15,7 @@ public class Loops {
         String answer = stringTimes("code", 3);
         System.out.println(answer);
 
-        String zzzzz = stringZ("nozthaznks");
+        String zzzzz = stringZ("zzz");
         System.out.println(zzzzz);
 
         sums(); 
@@ -68,15 +67,24 @@ public class Loops {
     //stringT("nozthaznks") -> "nothanks"
     //stringT("xksiazdjaasldzsajzasdz") -> "xksiadjaasldsajasdz"
     public static String stringZ(String str){
-
-        System.out.println("Look I removed all z's in a string but not at the beginning and end. ");
-
-        String s1 = str.replace("z",""); 
-        char start = 'z';
-        char end = 'z';
-        s1 = start + s1 + end; 
-
-        return s1; // <- this should be changed 
+        for (int i = 0 ;i < str.length();){
+            if (str.substring(0,1).equals("z") && str.substring(str.length()-1).equals("z"))
+            {
+                return str = "z"+ str.replace("z", "")+"z";
+            }
+            else if (str.substring(0,1).equals("z"))
+            {
+                return str ="z"+ str.replace("z", "");
+            }
+            else if(str.substring(str.length()-1).equals("z"))
+            {
+                return str =str.replace("z", "") +"z";
+            }
+            else{
+               return str= str.replace("z", "");
+            }
+        }
+        return str;
     }
 
     //Create a method that contains a while loop that allows for
